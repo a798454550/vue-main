@@ -1,6 +1,6 @@
-# cloudapp-fe-template
+# vue-main
 
-> 基于vue-cli初始化的vue项目脚手架（集成了动态路由生成、模块配置注入等功能），使用webpack来编译及测试环境搭建
+> 基于vue-cli初始化的vue项目主模块脚手架（集成了动态路由生成、模块配置注入等功能），使用webpack来编译及测试环境搭建
 
 > Share Vue components!
 
