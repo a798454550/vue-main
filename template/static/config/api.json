@@ -1,0 +1,70 @@
+{
+  "api": {
+    "title": "监测预警模块接口配置",
+    "version": "1.0.0",
+    "apiCombo": {
+      "enable": false
+    },
+    "cookieHeader": [
+      {
+        "key": "Authorization",
+        "cookie": "token"
+      },
+      {
+        "key": "system_id",
+        "cookie": "system_id"
+      }
+    ],
+    "interfaces": {
+      "rain": [
+        {
+          "name": "雨量量级分组",
+          "id": "rainGrade",
+          "url": "http://120.27.49.192:9082/api/v1/rain/grade"
+        },
+        {
+          "name": "雨量过程线接口",
+          "id": "rainDetails",
+          "url": "http://120.27.49.192:9082/api/v1/rain/details"
+        },
+        {
+          "name": "雨量量级图接口",
+          "id": "rainGradeImages",
+          "url": "http://120.27.49.192:9082/api/v2/images/rainfall/area"
+        },
+        {
+          "name": "雨量历史日降雨极值与重现期信息",
+          "id": "extrema24hRepeatrate",
+          "url": "https://easy-mock.com/mock/59fbc2cc1df48f72867e57b4/api/v1/24hextrema_repeatrate"
+        },
+        {
+          "name": "站点数据接口",
+          "id": "rainfallStation",
+          "url": "http://120.27.49.192:9082/api/v1/rain"
+        }
+      ],
+      "basic": [
+        {
+          "name": "行政区划获取",
+          "id": "baseAreas",
+          "url": "http://120.27.49.192:9100/api/v1/basic/areas"
+        },
+        {
+          "name": "基础数据获取",
+          "id": "commonData",
+          "url": "http://120.27.49.192:9100/api/v1/basic/data"
+        },
+        {
+          "name": "基础数据获取",
+          "id": "commonDataV1_1",
+          "url": "http://120.27.49.192:9100/api/v1.1/basic/data"
+        },
+        {
+          "name": "天气预报",
+          "id": "weatherForcastCaiYun",
+          "url": "http://120.27.49.192:9100/api/v1/rain/choi"
+        }
+      ]
+    }
+  }
+}

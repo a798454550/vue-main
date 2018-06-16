@@ -1,0 +1,50 @@
+{
+  "details": {
+    "mainLayout": {
+      "background": "#185ba2"
+    },
+    "headerLayout": "",
+    "contentCardsLayout": "",
+    "headerComponent": {
+      "component": "rainExtrema24hRepeatrate",
+      "props": {
+        "storeStateName": "extrema24hRepeatrate"
+      }
+    },
+    "contentCards": [
+      {
+        "id": "rainForecast24h",
+        "title": {
+          "enabled": true,
+          "label": "24小时降雨预报(mm)"
+        },
+        "className": "rainForecast24h",
+        "component": "rainForecast24h",
+        "componentProps": {},
+        "storeStateName": "weatherForecast",
+        "lazyload": {
+          "enabled": true,
+          "timeout": 1
+        }
+      },
+      {
+        "id": "panorama",
+        "title": {
+          "enabled": true,
+          "label": "全景图"
+        },
+        "className": "rainChartCard",
+        "component": "http://120.27.49.192:9182/web/html/mobilePanorama.html?id=20180203101010216",
+        "componentProps": {
+          "transform": {
+            "key": "station_id"
+          }
+        },
+        "lazyload": {
+          "enabled": true,
+          "timeout": 1
+        }
+      }
+    ]
+  }
+}

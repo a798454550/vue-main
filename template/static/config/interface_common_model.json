@@ -1,0 +1,180 @@
+{
+  "interface_common_model": {
+    "create_name": [
+      "rain.*"
+    ],
+    "rain": {
+      "grade": {
+        "description": "雨量量级分组接口",
+        "models": [
+          {
+            "method": "rainGrade",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {
+              "stat_method": "max",
+              "source_type": "all",
+              "forecast_type": "caiyun",
+              "raining": true,
+              "area_code": "350000"
+            }
+          }
+        ]
+      },
+      "ranking": {
+        "description": "雨量站点排名接口",
+        "models": [
+          {
+            "method": "rainGrade",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {
+              "stat_type": "station",
+              "source_type": "all",
+              "forecast_type": "caiyun",
+              "raining": true,
+              "area_code": "350000"
+            }
+          }
+        ]
+      },
+      "gradeImages": {
+        "description": "雨量量级图接口",
+        "models": [
+          {
+            "method": "rainGradeImages",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {
+              "type": "today",
+              "area_code": "350000"
+            }
+          }
+        ]
+      },
+      "rainSingleStation": {
+        "description": "单站点雨量接口",
+        "models": [
+          {
+            "method": "rainfallStation",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {
+              "hour_duration": "24"
+            }
+          }
+        ]
+      },
+      "details": {
+        "description": "雨量过程接口",
+        "models": [
+          {
+            "method": "rainDetails",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {
+              "raining": true,
+              "warning": true,
+              "forecast_type": "caiyun",
+              "forecast_hours": 1,
+              "interval": "1h"
+            }
+          }
+        ]
+      },
+      "extrema24hRepeatrate": {
+        "description": "历史极值",
+        "models": [
+          {
+            "method": "extrema24hRepeatrate",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {
+              "stat_type": "max"
+            }
+          }
+        ]
+      },
+      "rainstormCycle24h": {
+        "description": "暴雨重现期",
+        "models": [
+          {
+            "method": "commonData",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {
+              "key": "select_comapi_flood_repeat_rate_list",
+              "type": "rain"
+            }
+          }
+        ]
+      },
+      "extremeHistory": {
+        "description": "历史极值",
+        "models": [
+          {
+            "method": "commonDataV1_1",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {
+              "key": "select_comapi_rain_extrema_list"
+            }
+          }
+        ]
+      }
+    },
+    "base": {
+      "areas": {
+        "description": "行政区划获取",
+        "models": [
+          {
+            "method": "baseAreas",
+            "params": {
+              "read_current": true,
+              "read_sub": true,
+              "id": "350000"
+            }
+          }
+        ]
+      },
+      "weatherForcastCaiYun": {
+        "description": "彩云天气预报",
+        "models": [
+          {
+            "method": "weatherForcastCaiYun",
+            "options": {
+              "headers": {
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEzNjY2NjY2NjY2IiwicGFzc3dvcmQiOiIxMjM0NTY3OCJ9.eFmTV_u2s_Ck07IsoaEtsalaJnFGt2VLGLqIeeINK2Q"
+              }
+            },
+            "params": {}
+          }
+        ]
+      }
+    }
+  }
+}

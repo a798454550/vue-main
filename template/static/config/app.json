@@ -1,0 +1,167 @@
+{
+  "layout": {
+    "scrollnav": {
+      "height": "45px",
+      "color": "#333",
+      "current-color": "#3a79c9",
+      "toggle-text": "切换模块"
+    }
+  },
+  "map": {
+    "crs": "EPSG3857",
+    "zoom": 6,
+    "center": [
+      25.142222000,
+      118.5
+    ],
+    "bounds": [
+      0.456316,
+      90.183218,
+      44.857058,
+      134.726728
+    ],
+    "baseLayers": [
+      {
+        "id": "2",
+        "name": "gddt",
+        "label": "高德地图",
+        "url": "http://webst0{s}.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}",
+        "maxZoom": 13,
+        "minZoom": 3,
+        "subdomains": [
+          "1",
+          "2",
+          "3"
+        ],
+        "append": {
+          "url": "http://wprd0{s}.is.autonavi.com/appmaptile?x={x}&y={y}&z={z}&lang=zh_cn&size=1&scl=2&style=8&ltype=11",
+          "subdomains": [
+            "1",
+            "2",
+            "3"
+          ],
+          "label": "高德地名"
+        }
+      }
+    ],
+    "thematicLayers": [
+      {
+        "id": "102",
+        "name": "fjssst",
+        "label": "福建省水系图",
+        "url": "http://121.206.59.130:9082/api/v1/map/tile/arcgis?name=fjssxt&x={x}&y={y}&z={z}",
+        "maxZoom": 18,
+        "minZoom": 3,
+        "subdomains": [],
+        "checked": "true"
+      }
+    ],
+    "zoomControl": {
+      "enable": false,
+      "position": "bottomright"
+    },
+    "layersControl": {
+      "enable": true,
+      "position": "bottomleft"
+    }
+  },
+  "modules": [
+    {
+      "name": "rain",
+      "label": "雨情"
+    },
+    {
+      "name": "water",
+      "label": "水情"
+    }
+  ],
+  "authentication": {
+    "enable": true
+  },
+  "pages": [
+    {
+      "id": "rain",
+      "parentId": null,
+      "path": "/raindync/:module",
+      "name": "rain",
+      "component": "rain",
+      "meta": {
+        "keepAlive": true,
+        "moduleName": "raindd"
+      },
+      "props": {}
+    },
+    {
+      "id": "rainMain",
+      "parentId": null,
+      "path": "/rain/main",
+      "name": "rainMain",
+      "component": "rainmain",
+      "redirect": "/rain/main/map",
+      "checked": true,
+      "meta": {
+        "keepAlive": true,
+        "moduleName": "rain"
+      },
+      "props": {}
+    },
+    {
+      "id": "rainMap",
+      "parentId": "rainMain",
+      "path": "map",
+      "name": "rain/map",
+      "component": "rainmap",
+      "meta": {
+        "keepAlive": true
+      },
+      "props": {}
+    },
+    {
+      "id": "rainList",
+      "parentId": "rainMain",
+      "path": "list",
+      "name": "rain/list",
+      "component": "rainlist",
+      "checked": true,
+      "meta": {
+        "keepAlive": true
+      },
+      "props": {}
+    },
+    {
+      "id": "rainDetails",
+      "parentId": null,
+      "path": "/rain/details",
+      "name": "rain/details",
+      "component": "rainDetails",
+      "meta": {
+        "keepAlive": true
+      },
+      "props": {}
+    },
+    {
+      "id": "waterMap",
+      "parentId": null,
+      "path": "/water/map",
+      "name": "water/map",
+      "component": "rainmap",
+      "meta": {
+        "keepAlive": true,
+        "moduleName": "water"
+      },
+      "props": {}
+    },
+    {
+      "id": "waterList",
+      "parentId": null,
+      "path": "/water/list",
+      "name": "water/list",
+      "component": "rainlist",
+      "meta": {
+        "keepAlive": true,
+        "moduleName": "water"
+      },
+      "props": {}
+    }
+  ]
+}

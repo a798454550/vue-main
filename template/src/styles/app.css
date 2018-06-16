@@ -1,0 +1,20 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: normal;
+}
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  font-family: Microsoft YaHei;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-size:cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
