@@ -17,7 +17,7 @@
 
 ```
 npm i -g vue-cli
-vue init a798454550/istrong-ca-fe-template project-name
+vue init a798454550/vue-main project-name
 ```
 project-name 为你的组件名称。
 
