@@ -37,9 +37,6 @@ new Vue({
   template: '<App/>',
   components: { App },
   beforeCreate() {
-    {{#authentication}}
-    routeAuthentication(this);//用于用户登录鉴权注册，需要实现pages/login.vue(如果是import另外的login，需要在store/components中指定)
-    {{/authentication}}
     this.$api.get({ url: './config/app.json', cache: true }).then(config => {
       this.$store.commit('config/pushAppConfig', config || {});//配置信息初始化到config中
     });
