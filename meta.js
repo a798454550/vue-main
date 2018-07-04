@@ -71,16 +71,6 @@ module.exports = {
         "value": "none"
       }]
     },
-    authentication: {
-      type: 'confirm',
-      message: '是否需要初始化用户登录鉴权模块?',
-      default: false
-    },
-    registerRouters: {
-      type: 'confirm',
-      message: '是否需要路由动态注册模块?',
-      default: false
-    },
     lint: {
       type: 'confirm',
       message: '是否使用ESLint规范您的代码?',
@@ -113,11 +103,6 @@ module.exports = {
       })
     };
     const msg = '   常用命令：\n\n   安装依赖：npm install\n      代码规范检测：npm run lint\n   自动修复代码规范问题：npm run fix\n   启动本地服务器：npm run dev\n   生成环境编译：npm run build:dll && npm run build'
-
-    if(!data.authentication){
-      fs.unlinkSync(path.join(data.destDirName, 'src', 'router','authentication.js'));
-      fs.unlinkSync(path.join(data.destDirName, 'src', 'pages','Login.vue'));
-    }
 
     if (!data.autobuild) {
       console.log('初始化完成！\n   cd ' + data.destDirName + '\n  npm install\n npm run build\n npm run dev')
