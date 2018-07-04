@@ -3,7 +3,7 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    vendor: ['babel-polyfill', 'vue/dist/vue.esm.js', 'vue-router', 'vuex', 'es6-promise', 'fastclick'] // 需要打包起来的依赖
+    vendor: ['vue/dist/vue.esm.js', 'vue-router', 'vuex', 'es6-promise', 'fastclick'] // 需要打包起来的依赖
   },
   output: {
     path: path.join(__dirname, '../static/public/js'), // 输出的路径
