@@ -1,15 +1,40 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-
-import components from './components';
-
-import frameworkStore from '@strongsoft/ca-framework-vuex'
+import _ from 'lodash';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  modules: {
-    ...frameworkStore,
-    components
-  }
+    state: {
+        // data: [],
+    },
+    getters: {
+        // data: state => {
+        //     return state.data;
+        // }
+    },
+    mutations: {
+
+    },
+    actions: {
+
+    },
+    modules: {
+        config: {
+            namespaced: true,
+            state: {
+                app: {}
+            },
+            getters: {
+                app: (state) => (key) => {
+                    return key && key !== '' ? state.app[key] : state.app;
+                },
+            },
+            mutations:{
+                pushAppConfig(state, data) {
+                    state.app = data;
+                }
+            }
+        }
+    }
 });

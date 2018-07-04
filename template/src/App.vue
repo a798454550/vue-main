@@ -1,10 +1,6 @@
 <template>
-  <div id="app">
-    <!--页面是否缓存通过meta的keepAlive属性控制-->
-    <keep-alive>
-      <router-view v-if="$route.meta.keepAlive" />
-    </keep-alive>
-    <router-view v-if="!$route.meta.keepAlive" />
+  <div class="app">
+    <router-view></router-view>
   </div>
 </template>
 
@@ -85,61 +81,6 @@ export default {
 {{#if_eq uiLibrary 'vux'}}
 <style lang="less">
 @import '~vux/src/styles/reset.less';
-
-
-.vux-confirm{
-  .weui-dialog{
-    border-radius: 10px;
-  }
-  .weui-dialog__bd{
-    color: #333!important;
-    font-size: 17px!important;    
-    padding: 22px!important;
-    min-height: 25px;
-  }
-  .weui-dialog__btn_primary,
-  .weui-dialog__btn_default
-  {
-    font-size: 17px!important;
-    color: #4EA8EC;
-  }
-}
-.vux-tab {
-  .vux-tab-item {    
-    color: #666 !important;
-    font-size: 17px !important;
-  }
-  .vux-tab-selected{
-    color: #4ea8ec!important;
-  }
-  .vux-tab-ink-bar{
-    height: 3px!important;
-    background-color: #4ea8ec!important;
-  }
-}
-.vux-alert{
-  .weui-dialog{
-    border-radius: 10px;
-  }
-  .weui-dialog__bd{
-    color: #333!important;
-    font-size: 17px!important;   
-    min-height: 25px;
-  }
-  .weui-dialog__btn_primary{
-    font-size: 17px!important;
-    color: #4EA8EC!important;
-  }
-}
-.vux-search-box{
-  .weui-search-bar{
-    background-color: #F5F5F5;
-  }
-  .weui-search-bar__cancel-btn {
-    color: #4ea8ec !important;
-    font-size: 16px;
-  }
-}
 </style>
 {{/if_eq}}
 <style scoped>

@@ -1,21 +1,20 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-{{#authentication}}
-//路由鉴权
-import routeAuthentication from './authentication'
-{{/authentication}}
+import mainComponent from '../App';
 
-Vue.use(Router)
+Vue.use(Router);
 
 const router = new Router({
+    routes: [{
+        path: '/',
+        name: 'root',
+        redirect: '/main'
+    },{
+        path: '/main',
+        name: 'main',
+        component: mainComponent
+    }]
 });
-
-
-{{#authentication}}
-export {
-  routeAuthentication
-}
-{{/authentication}}
 
 export default router;
