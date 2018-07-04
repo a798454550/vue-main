@@ -29,8 +29,7 @@
     "mint-ui": "^2.2.13",
     {{/if_eq}}
     "istrong-fonticon": "^0.2.0",
-    "istrong-common-model": "^0.4.0",
-    "@strongsoft/ca-framework-vuex": "^0.1.0"
+    "istrong-common-model": "^0.4.0"
   },
   "devDependencies": {
     {{#lint}}
