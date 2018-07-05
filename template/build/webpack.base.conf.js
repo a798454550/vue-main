@@ -36,8 +36,7 @@ let webpackConfig = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'istrong-fonticon': resolve('node_modules/istrong-fonticon/dist/istrong-fonticon.css')
+      '@': resolve('src')
     }
   },
   module: {
