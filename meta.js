@@ -83,40 +83,7 @@ module.exports = {
     }
   },
   complete: (data, helpers) => {
-    const { chalk } = helpers;
-    const runCommand = (cmd, args, options) => {
-      return new Promise((resolve, reject) => {
-        const spwan = spawn(
-          cmd,
-          args,
-          Object.assign({
-            cwd: process.cwd(),
-            stdio: 'inherit',
-            shell: true,
-          },
-            options
-          )
-        )
-        spwan.on('exit', () => {
-          resolve()
-        })
-      })
-    };
     const msg = '   常用命令：\n\n   安装依赖：npm install\n      代码规范检测：npm run lint\n   自动修复代码规范问题：npm run fix\n   启动本地服务器：npm run dev\n   生成环境编译：npm run build:dll && npm run build'
-
-    console.log(chalk.yellow('Message:'), '开始安装依赖，安装过程大概需要4~5分钟，请耐心等候...')
-    const cwd = { cwd: `${data.name}` }
-
-    runCommand('npm', ['install'], cwd)
-      .then(() => {
-        console.log('\n   依赖安装完成！')
-        console.log('\n   开始生成静态库...')
-        runCommand('npm', ['run', 'build:dll'], cwd).then(() => {
-          console.log('\n   静态库生成！');
-          console.log('\n   开始启动...');
-          runCommand('npm', ['run', 'dev'], cwd)
-          console.log(msg)
-        });
-      })
+    console.log(msg);
   }
 }
