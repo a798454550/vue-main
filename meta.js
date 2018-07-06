@@ -86,4 +86,4 @@ module.exports = {
     const msg = '   常用命令：\n\n   安装依赖：npm install\n      代码规范检测：npm run lint\n   自动修复代码规范问题：npm run fix\n   启动本地服务器：npm run dev\n   生成环境编译：npm run build:dll && npm run build'
     console.log(msg);
   }
-}
+};
