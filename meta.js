@@ -71,14 +71,14 @@ module.exports = {
         "value": "none"
       }]
     },
+    ajax: {
+        type: 'confirm',
+        message: '是否注入$ajax对象(内部使用)?',
+        default: false
+    },
     lint: {
       type: 'confirm',
       message: '是否使用ESLint规范您的代码?',
-      default: false
-    },
-    autobuild: {
-      type: 'boolean',
-      message: '自动安装依赖并运行测试',
       default: false
     }
   },
@@ -103,11 +103,6 @@ module.exports = {
       })
     };
     const msg = '   常用命令：\n\n   安装依赖：npm install\n      代码规范检测：npm run lint\n   自动修复代码规范问题：npm run fix\n   启动本地服务器：npm run dev\n   生成环境编译：npm run build:dll && npm run build'
-
-    if (!data.autobuild) {
-      console.log('初始化完成！\n   cd ' + data.destDirName + '\n  npm install\n npm run build\n npm run dev')
-      return;
-    }
 
     console.log(chalk.yellow('Message:'), '开始安装依赖，安装过程大概需要4~5分钟，请耐心等候...')
     const cwd = { cwd: `${data.name}` }
