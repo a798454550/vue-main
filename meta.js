@@ -56,7 +56,7 @@ module.exports = {
     },
     uiLibrary: {
       type: "list",
-      message: "请选择UI库（建议使用Vux）",
+      message: "请选择UI库",
       default: 0,
       choices: [{
         "name": "Vux",

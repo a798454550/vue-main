@@ -22,7 +22,7 @@
     "vuex": "^3.0.0",
     "fastclick": "~1.0.0",
     {{#if_eq uiLibrary "vux"}}
-    "vux": "^2.2.0",
+    "vux": "^2.9.0",
     {{/if_eq}}
     {{#if_eq uiLibrary "mint-ui"}}
     "mint-ui": "^2.2.13",
@@ -51,9 +51,6 @@
     "babel-loader": "^7.1.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.22.0",
-    {{#if_eq uiLibrary "mint-ui"}}
-    "babel-plugin-component": "^0.10.0",
-    {{/if_eq}}
     "babel-polyfill": "^6.26.0",
     "node-sass": "^4.9.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
@@ -91,15 +88,18 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
-    {{#if_eq uiLibrary "vux"}}
-    "vux-loader": "^1.0.56",
-    {{/if_eq}}
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
+    {{#if_eq uiLibrary "vux"}}
+    "vux-loader": "^1.0.56",
+    {{/if_eq}}
+    {{#if_eq uiLibrary "mint-ui"}}
+    "babel-plugin-component": "^0.10.0",
+    {{/if_eq}}
     "webpack-merge": "^4.1.0"
   },
   "engines": {
