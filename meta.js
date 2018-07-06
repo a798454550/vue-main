@@ -42,7 +42,7 @@ module.exports = {
       type: 'string',
       required: false,
       message: '项目简要概述',
-      default: '一个Vue搭建的移动云应用。'
+      default: 'Vue主模块。'
     },
     version: {
       type: 'string',
@@ -56,7 +56,7 @@ module.exports = {
     },
     uiLibrary: {
       type: "list",
-      message: "请选择组件库（建议使用Vux）",
+      message: "请选择UI库（建议使用Vux）",
       default: 0,
       choices: [{
         "name": "Vux",

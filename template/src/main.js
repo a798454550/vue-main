@@ -11,7 +11,7 @@ import App from './App'
 
 import router {{#authentication}} , { routeAuthentication }  {{/authentication}} from '@/router'//注册路由配置
 {{#ajax}}
-import api from 'istrong-common-model';
+import api from 'ajax-common-model';
 {{/ajax}}
 import store from '@/store' //全局状态管理器
 
@@ -39,11 +39,11 @@ new Vue({
   template: '<App/>',
   components: { App },
   beforeCreate() {
-      {{#ajax}}
-        this.$api.get({ url: './config/app.json', cache: true }).then(config => {
-            this.$store.commit('config/pushAppConfig', config || {});//配置信息初始化到config中
-        });
-      {{/ajax}}
+  {{#ajax}}
+    this.$api.get({ url: './config/app.json', cache: true }).then(config => {
+        this.$store.commit('config/pushAppConfig', config || {});//配置信息初始化到config中
+    });
+  {{/ajax}}
   },
   methods: {
   }

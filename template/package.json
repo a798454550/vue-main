@@ -28,7 +28,9 @@
     {{#if_eq uiLibrary "mint-ui"}}
     "mint-ui": "^2.2.13",
     {{/if_eq}}
-    "istrong-common-model": "^0.4.0"
+    {{#ajax}}
+    "ajax-common-model": "^0.4.0"
+    {{/ajax}}
   },
   "devDependencies": {
     {{#lint}}
