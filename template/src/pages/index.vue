@@ -1,13 +1,12 @@
 <template>
-  <div class="app">
-    <router-view></router-view>
+  <div class="index">
     Hello World!
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: 'index',
   components: {
   },
   data() {
@@ -25,10 +24,10 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
-#app > div {
-  width: 100%;
-  height: 100%;
+.index{
+
 }
 </style>
 
