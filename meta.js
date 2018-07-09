@@ -30,6 +30,12 @@ module.exports = {
       const startPosition = author.indexOf('<')
       const endPosition = author.indexOf('>')
       return author.slice(startPosition + 1, endPosition)
+    },
+    if_or_less: function (css, uiLibrary, options) {
+        if (css === 'less' || uiLibrary === 'vux') {
+            return options.fn(this);
+        }
+        return options.inverse(this);
     }
   },
   prompts: {
@@ -61,7 +67,7 @@ module.exports = {
       choices: [{
         "name": "Vux",
         "value": "vux",
-        "short": "活跃度高"
+        "short": "Vux,一款基于移动端的UI框架"
       }, {
         "name": "mint-ui",
         "value": "mint-ui",
